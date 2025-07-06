@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aroma - Tu rincón favorito</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Iconos: FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <link rel="shortcut icon" href="imagenes/op.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Banner animado -->
+    <header class="banner">
+        <div class="banner-slider">
+            <img src="imagenes/yu.jpg " alt="Café humeante" class="banner-img active">
+            <img src="imagenes/preparación.jpg" alt="Barista preparando café" class="banner-img">
+            <img src="imagenes/postre.jpg" alt="Postre y café" class="banner-img">
+        </div>
+        <div class="banner-overlay"></div>
+        <h1 class="animated-text">Disfruta el mejor café de la ciudad</h1>
+    </header>
+
+    <!-- Contenido principal con 3 columnas -->
+    <main class="main-content">
+        <section class="columna">
+            <h2>Menú Especial</h2>
+            <p>Prueba nuestros cafés artesanales, postres caseros y bebidas frías preparadas con ingredientes seleccionados.</p>
+            <img src="imagenes/cafe.jpg" alt="Menú de café" class="responsive-img">
+        </section>
+        <section class="columna">
+            <h2>Ambiente Único</h2>
+            <p>Relájate en un espacio acogedor, ideal para leer, trabajar o compartir con amigos. ¡Ven y vive la experiencia Café Aroma!</p>
+            <img src="imagenes/ambiente.jpg" alt="Ambiente de cafetería" class="responsive-img">
+        </section>
+        <aside class="columna formulario">
+            <h2>Reserva tu mesa</h2>
+            <form>
+                <label>Nombre:</label>
+                <input type="text" required>
+                <label>Email:</label>
+                <input type="email" required>
+                <button type="submit">Reservar</button>
+            </form>
+        </aside>
+    </main>
+
+    <!-- Footer con iconos -->
+    <footer>
+        <p>© 2025 Café Aroma</p>
+        <div class="iconos">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <address>Dirección: Av. Central 456, Ciudad Café</address>
+    </footer>
+
+    <!-- Banner animado JS -->
+    <script>
+        const images = document.querySelectorAll('.banner-img');
+        let current = 0;
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 3500);
+    </script>
+</body>
+</html>
+
